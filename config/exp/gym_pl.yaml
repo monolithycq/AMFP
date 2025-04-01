@@ -1,0 +1,8 @@
+return_dim: 1  # return-to-go
+batch_size: 2048
+lr: 1e-3
+ctx_size: 10
+future_horizon: 15
+epochs: 100
+use_scheduler: False
+num_eval_rollouts: 10
