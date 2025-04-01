@@ -1,0 +1,27 @@
+_target_: 'AMFP.model.amfpnet.AMFPNet'
+env_name: ???
+obs_dim: ???
+action_dim: ???
+ctx_size: ???
+future_horizon: ???
+epochs: ???
+lr: ???
+seed: ???
+return_type: ???
+stage: 'trl'  # trajectory representation learning
+model_config:
+  use_goal: True
+  ar_mask_ratios: [0, 0.2, 0.4, 0.6, 0.8]
+  rnd_mask_ratios: [0, 0.2, 0.4, 0.6, 0.8]
+  ar_mask_ratio_weights: [0.8, 0.05, 0.05, 0.05, 0.05]
+  n_slots: 4
+  n_enc_layers: 2
+  n_dec_layers: 2
+  embed_dim: 256
+  n_head: 4
+  pdrop: 0.1
+  temperature: 0.02
+  positive_nums: 3
+  head_dropout: 0.1
+  divide: True
+  negative_nums: 64
