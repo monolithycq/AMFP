@@ -1,0 +1,26 @@
+defaults:
+  - _self_
+  - model: amfpnet
+  - exp: gym_trl
+#  - model: policynet
+#  - exp: gym_pl
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+wandb:
+  project: "AMFP"
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .
+
+seed: 2
+
+env_name: ???  # specified later
+max_episode_length: 1001
+devices: [1]
+num_workers: 4
+train_size: 0.9
+eval_last_k: 5
+info: ''
